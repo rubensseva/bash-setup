@@ -10,7 +10,13 @@ sudo apt-get --assume-yes install curl
 sudo apt-get --assume-yes install wget
 sudo apt-get --assume-yes install thunderbird
 
+# Install fzf
+# Probably needs to be done before vim config file is used
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+sudo ~/.fzf/install
+
 # Install neovim
+# NOTE: if vim-plug doesnt work, this might be because of some permissions with nvim's autoload folder.
 sudo apt-get --assume-yes install software-properties-common
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
@@ -35,3 +41,5 @@ sudo sudo apt-get --assume-yes install -y nodejs
 # Install zsh and oh-my-zsh
 sudo apt-get --assume-yes install zsh
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
