@@ -32,3 +32,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 echo "curl'ing nodejs"
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get --assume-yes install -y nodejs
+
+# Install zsh and oh-my-zsh
+apt-get --assume-yes install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
