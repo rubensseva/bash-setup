@@ -1,23 +1,23 @@
 #!/bin/sh
 
-sudo apt-get update
-sudo apt-get --assume-yes upgrade
+sudo apt update
+sudo apt --assume-yes upgrade
 
 # Install essentials
-sudo apt-get --assume-yes install apt-transport-https
-sudo apt-get --assume-yes install git
-sudo apt-get --assume-yes install vim
-sudo apt-get --assume-yes install curl
-sudo apt-get --assume-yes install wget
-sudo apt-get --assume-yes install tmux
-sudo apt-get --assume-yes install thunderbird
+sudo apt --assume-yes install apt-transport-https
+sudo apt --assume-yes install git
+sudo apt --assume-yes install vim
+sudo apt --assume-yes install curl
+sudo apt --assume-yes install wget
+sudo apt --assume-yes install tmux
+sudo apt --assume-yes install thunderbird
 
 # Make tmux not wait forever when going to normal mode in vim
 # Vim is completely useless when running in tmux without this
 sudo cat "set -sg escape-time 0" >> ~/.tmux.conf
 
 # Install zsh and oh-my-zsh
-sudo apt-get --assume-yes install zsh
+sudo apt --assume-yes install zsh
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install fzf
@@ -27,11 +27,11 @@ sudo ~/.fzf/install
 
 # Install neovim
 # NOTE: if vim-plug doesnt work, this might be because of some permissions with nvim's autoload folder.
-sudo apt-get --assume-yes install software-properties-common
+sudo apt --assume-yes install software-properties-common
 sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get --assume-yes install neovim
-sudo apt-get --assume-yes install python-dev python-pip python3-dev python3-pip
+sudo apt update
+sudo apt --assume-yes install neovim
+sudo apt --assume-yes install python-dev python-pip python3-dev python3-pip
 
 # Make config file and directory and get custom nvim config file
 echo "Installing neovim"
@@ -47,7 +47,7 @@ sudo curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://
 # Install nodejs
 echo "curl'ing nodejs"
 sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo sudo apt-get --assume-yes install -y nodejs
+sudo sudo apt --assume-yes install -y nodejs
 
 # Install vscode
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
