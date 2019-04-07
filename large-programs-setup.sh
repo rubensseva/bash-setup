@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+# Install thunderbird
 sudo apt --assume-yes install thunderbird
 
 # Install chrome

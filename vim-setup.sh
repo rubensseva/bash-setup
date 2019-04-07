@@ -10,7 +10,6 @@ sudo npm install -g tern
 # Install npm neovim
 sudo npm install -g neovim
 
-
 # Install neovim
 # NOTE: if vim-plug doesnt work, this might be because of some permissions with nvim's autoload folder.
 sudo apt --assume-yes install software-properties-common
@@ -35,7 +34,7 @@ rm Ubuntu.zip
 fc-cache -fv
 
 # Get colorschemes for gnome terminal
-# Doing this here since they are important for vim colorschemes 
+# Doing this in this script bacause they are important for vim colorschemes 
 # to work properly in terminal
 read -p "Would you like to install GNOME terminal colorschemes? y/n" choice
 if [ $choice == "y" ]
