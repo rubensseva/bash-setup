@@ -25,7 +25,7 @@ if [ $choice == "y" ]
 then
   echo "Installing"
   wget https://download.jetbrains.com/idea/ideaIC-2019.1-jbr11.tar.gz
-  tar -C /opt/ -xvzf ideaIC-2019.1-jbr11.tar.gz
+  sudo tar -C /opt/ -xvzf ideaIC-2019.1-jbr11.tar.gz
   /opt/idea-IC-191.6183.87/bin/idea.sh
   rm ideaIC-2019.1-jbr11.tar.gz
 else 
