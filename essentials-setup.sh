@@ -13,4 +13,4 @@ sudo apt --assume-yes install tmux
 
 # Make tmux not wait forever when going to normal mode in vim
 # Vim is completely useless when running in tmux without this
-cat "set -sg escape-time 0" >> ~/.tmux.conf
+echo "set -sg escape-time 0" >> ~/.tmux.conf
