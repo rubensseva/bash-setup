@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 sudo apt update
 sudo apt --assume-yes upgrade
@@ -10,6 +10,7 @@ sudo apt --assume-yes install vim
 sudo apt --assume-yes install curl
 sudo apt --assume-yes install wget
 sudo apt --assume-yes install tmux
+sudo apt --assume-yes install xclip
 
 # Make tmux not wait forever when going to normal mode in vim
 # Vim is completely useless when running in tmux without this

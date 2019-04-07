@@ -1,4 +1,6 @@
 
+# Important
+Run from home folder!
 
 # On t450s
 ## Vim
@@ -14,3 +16,4 @@ cd iwlwifi-firmware/firmware
 sudo cp iwlwifi-7265*  /lib/firmware
 ```
 then reboot. 
+It might also help to disable IPv6

@@ -1,19 +1,39 @@
-#!/bin/sh
+#!/bin/bash
 
 
 sudo apt --assume-yes install thunderbird
 
-# Install nodejs
-echo "curl'ing nodejs"
-sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo sudo apt --assume-yes install -y nodejs
+# Install chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo rm google-chrome-stable_current_amd64.deb
 
 # Install vscode
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt install code
 
-# Install chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-sudo rm google-chrome-stable_current_amd64.deb
+# Install sublime 
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt update
+sudo apt install sublime-text
+
+
+
+# Install intellij
+read -p "Would you like to install intellij? y/n" choice
+if [ $choice == "y" ]
+then
+  echo "Installing"
+  wget https://download.jetbrains.com/idea/ideaIC-2019.1-jbr11.tar.gz
+  tar -C /opt/ -xvzf ideaIC-2018.3.2.tar.gz
+  /opt/idea-IC-191.6183.87/bin/idea.sh
+  rm ideaIC-2018.3.2.tar.gz
+else 
+  echo "Skipping intellij"
+fi
+
+echo "done"
+
+
