@@ -23,9 +23,18 @@ then
   sudo echo "alias vim=nvim" >> ~/.zshrc
   sudo echo "alias vi=nvim" >> ~/.zshrc
 
+  read -p "Install i3? y/n " ichoice
+  if [ $ichoice == "y" ]
+  then
+    echo "Installing"
+    sudo apt install i3
+  else 
+    echo "Skipping i3"
+  fi
+  echo "Done"
 
 else 
-  echo "Skipping GNOME terminal colorschemes"
+  echo "Skipping last setup"
 fi
 echo "done"
 
