@@ -1,8 +1,12 @@
+# Setup scripts for Ubuntu
+Made for personal use
+Can run with this oneliner: 
+```
+git clone -q https://github.com/rubensseva/bash-setup && cd bash-setup && bash main.sh && cd .. && sudo rm -r bash-setup     
+```
 
-# Important
-Run from home folder!
 
-# On t450s
+# Some notes issues on t450s
 ## Vim
 Some permissions like the ShaDa file needs configuring
 just run `chmod` on it.
