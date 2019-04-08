@@ -2,7 +2,7 @@
 
 # Install nodejs
 echo "curl nodejs"
-sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo sudo apt --assume-yes install -y nodejs
 
 # Install ternjs
