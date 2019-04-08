@@ -6,10 +6,9 @@ git clone -q https://github.com/rubensseva/bash-setup && cd bash-setup && bash m
 ```
 
 
-# Some notes issues on t450s
+# Personal reminders on issues with lenovo t450s
 ## Vim
-Some permissions like the ShaDa file needs configuring
-just run `chmod` on it.
+Some permissions like the ShaDa file may need configuring, just run `chmod` on it (should be fixed).
 ## Wifi
 ### Firmware update
 Need to run these commands to update firmware and make wifi work:
