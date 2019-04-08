@@ -1,5 +1,5 @@
 # Setup scripts for Ubuntu
-Made for personal use
+Made for personal use  
 Can run with this oneliner: 
 ```
 git clone -q https://github.com/rubensseva/bash-setup && cd bash-setup && bash main.sh && cd .. && sudo rm -r bash-setup     
