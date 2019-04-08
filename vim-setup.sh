@@ -17,15 +17,17 @@ sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt update
 sudo apt --assume-yes install neovim
 sudo apt --assume-yes install python-dev python-pip python3-dev python3-pip
+sudo pip install pynvim
+sudo pip3 install pynvim
 
 # Make config file and directory and get custom nvim config file
 echo "Installing neovim"
 mkdir ~/.config/nvim
 touch ~/.config/nvim/init.vim
 echo "curl custom nvim config"
-sudo curl https://raw.githubusercontent.com/rubensseva/vim_configs/master/init.vim > ~/.config/nvim/init.vim
+curl https://raw.githubusercontent.com/rubensseva/vim_configs/master/init.vim > ~/.config/nvim/init.vim
 # Install vim-plug for neovim
-sudo curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install nerdfonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Ubuntu.zip
