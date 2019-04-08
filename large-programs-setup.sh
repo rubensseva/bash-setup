@@ -45,7 +45,7 @@ else
 fi
 echo "done"
 
-# Install intellij
+# Install Discord
 read -p "Discord? y/n" choice
 if [ $choice == "y" ]
 then
