@@ -13,7 +13,7 @@ sudo npm install -g neovim
 # Install neovim
 # NOTE: if vim-plug doesnt work, this might be because of some permissions with nvim's autoload folder.
 sudo apt --assume-yes install software-properties-common
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt update
 sudo apt --assume-yes install neovim
 sudo apt --assume-yes install python-dev python-pip python3-dev python3-pip
