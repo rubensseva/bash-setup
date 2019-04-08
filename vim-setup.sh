@@ -30,22 +30,10 @@ unzip Ubuntu.zip -d ~/.fonts
 rm Ubuntu.zip
 fc-cache -fv
 
-# Fix that is sometimes nesceccary
-read -p "Would you like to add permissions to the /home/ruben/.local/share/nvim folder? ( recommend no, fix it manually if something breaks ) y/n" choice
-if [ $choice == "y" ]
-then
-  echo "Setting permissions"
-  sudo chmod -R 777 /home/ruben/.local/share/nvim
-else 
-  echo "Skipping"
-fi
-echo "done"
-
-
 # Get colorschemes for gnome terminal
 # Doing this in this script bacause they are important for vim colorschemes 
 # to work properly in terminal
-read -p "Would you like to install GNOME terminal colorschemes? (make sure you create a gnome terminal profile before this) y/n" choice
+read -p "Would you like to install GNOME terminal colorschemes? (make sure you create a gnome terminal profile before this. Recommend installing gruvbox) y/n" choice
 if [ $choice == "y" ]
 then
   echo "Installing"

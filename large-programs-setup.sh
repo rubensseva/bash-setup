@@ -20,8 +20,8 @@ sudo apt update
 sudo apt --assume-yes install sublime-text
 
 # Install intellij
-read -p "Would you like to install intellij? y/n" choice
-if [ $choice == "y" ]
+read -p "Would you like to install intellij? y/n " lpchoice
+if [ $lpchoice == "y" ]
 then
   echo "Installing"
   wget https://download.jetbrains.com/idea/ideaIC-2019.1-jbr11.tar.gz
@@ -34,8 +34,8 @@ fi
 echo "done"
 
 # Install slack
-read -p "Slack? y/n" choice
-if [ $choice == "y" ]
+read -p "Slack? y/n " lpchoice
+if [ $lpchoice == "y" ]
 then
   echo "Installing"
   wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
@@ -46,8 +46,8 @@ fi
 echo "done"
 
 # Install Discord
-read -p "Discord? y/n" choice
-if [ $choice == "y" ]
+read -p "Discord? y/n " lpchoice
+if [ $lpchoice == "y" ]
 then
   echo "Installing"
   sudo apt update
