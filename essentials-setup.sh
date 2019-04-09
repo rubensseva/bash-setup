@@ -12,6 +12,8 @@ sudo apt --assume-yes install wget
 sudo apt --assume-yes install tmux
 sudo apt --assume-yes install xclip
 sudo apt --assume-yes install feh
+sudo apt --assume-yes install exfat-fuse exfat-utils
+
 
 # Make tmux not wait forever when going to normal mode in vim
 # Vim is completely useless when running in tmux without this
